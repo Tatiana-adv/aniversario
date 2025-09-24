@@ -1,0 +1,50 @@
+@import 'variables';
+
+.countdown {
+    background-color: rgba(0,0,0,0.3);
+    
+    &__timer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            min-width: 100px;
+        }
+
+        &__number {
+            font-family: $font-headings;
+            font-size: 4rem;
+            color: $accent-cyan;
+            line-height: 1;
+        }
+
+        &__label {
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Media Queries para o contador
+@media (max-width: 768px) {
+    .countdown__timer {
+        gap: 10px;
+        &__number {
+            font-size: 2.5rem;
+        }
+        & > div {
+            min-width: 80px;
+            padding: 15px 10px;
+        }
+    }
+}
