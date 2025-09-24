@@ -1,0 +1,130 @@
+@import 'variables';
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(rgba(10, 4, 28, 0.8), rgba(10, 4, 28, 1)), url('https://via.placeholder.com/1920x1080/0a041c/FFFFFF?text=Imagem+de+Fundo+Cósmica');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid $accent-cyan;
+
+    &__title {
+        font-family: $font-headings;
+        font-size: 4rem;
+        font-weight: 700;
+        text-shadow: 0 0 15px $accent-purple;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    &__date {
+        font-size: 1.2rem;
+        background-color: $accent-purple;
+        color: $space-light;
+        padding: 8px 16px;
+        display: inline-block;
+        margin-top: 20px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+}
+
+.details {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    &__card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba($accent-purple, 0.5);
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        &__title {
+            font-family: $font-headings;
+            font-size: 1.5rem;
+            color: $accent-cyan;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.location {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__address {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    &__cta-info {
+        margin-top: 8px;
+        margin-bottom: 30px;
+        opacity: 0.8;
+    }
+}
+
+.cta-button {
+    font-family: $font-headings;
+    background-color: $accent-cyan;
+    color: $space-dark;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: lighten($accent-cyan, 10%);
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+// Media Queries para Responsividade
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
